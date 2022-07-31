@@ -1,5 +1,5 @@
 export async function get() {
-  let posts = await import.meta.globEager(`/pages/post/*.md`);
+  let posts = await import.meta.globEager(`./post/*.md`);
   return {
     body: JSON.stringify(
       Object.values(posts)
